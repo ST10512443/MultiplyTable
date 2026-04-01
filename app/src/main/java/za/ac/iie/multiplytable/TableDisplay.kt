@@ -1,6 +1,7 @@
 package za.ac.iie.multiplytable
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -11,6 +12,16 @@ class TableDisplay : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_table_display)
+
+        //assigning data from main page to variables
+        val bundle: Bundle? = intent.extras
+        // getting the number entered by the user as a string
+        val tableString: String? = bundle?.getString("tableNumber")
+        //converting the string back into a number ready for multiplcation
+        val tableNumber = tableString?.toInt()
+
+        val multiplyTable = findViewById<TextView>(R.id.tableDisplayTxt)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
