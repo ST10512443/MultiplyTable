@@ -15,12 +15,19 @@ class TableDisplay : AppCompatActivity() {
 
         //assigning data from main page to variables
         val bundle: Bundle? = intent.extras
+
         // getting the number entered by the user as a string
         val tableString: String? = bundle?.getString("tableNumber")
-        //converting the string back into a number ready for multiplcation
-        val tableNumber = tableString?.toInt()
 
+        //converting the string back into a number ready for multiplcation
+        val tableNumber = tableString!!.toInt() //changed from ? to !!
         val multiplyTable = findViewById<TextView>(R.id.tableDisplayTxt)
+        val timesDisplay: String = "$tableNumber x tables\n\n"
+
+        //Displaying the number the user entered on the second page next to the text "x tables"
+        multiplyTable.text = timesDisplay
+
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
