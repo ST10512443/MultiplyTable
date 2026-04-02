@@ -22,10 +22,26 @@ class TableDisplay : AppCompatActivity() {
         //converting the string back into a number ready for multiplcation
         val tableNumber = tableString!!.toInt() //changed from ? to !!
         val multiplyTable = findViewById<TextView>(R.id.tableDisplayTxt)
-        val timesDisplay: String = "$tableNumber x tables\n\n"
+        var timesDisplay: String = "$tableNumber x tables\n\n"
+
+        //creating counter for while loop
+        var count = 1
 
         //Displaying the number the user entered on the second page next to the text "x tables"
         multiplyTable.text = timesDisplay
+
+        while (count <= 10) {
+            //example user enters 5 and count is 1 then display 5x1
+            val answer = tableNumber * count
+            /*displays as
+             5 x tables
+
+             5x1=5
+             */
+            timesDisplay += "$tableNumber x $count = ${answer}\n" //we use += because we adding on if we use = then it doesnt add on
+         //increasing count
+            count++
+        }
 
 
 
