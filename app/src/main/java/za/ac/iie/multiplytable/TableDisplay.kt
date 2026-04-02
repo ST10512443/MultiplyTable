@@ -36,8 +36,10 @@ class TableDisplay : AppCompatActivity() {
             if (count == 4){
                 count++
                 continue
+                //Adding a break
+                //break 
             }
-            
+
             //example user enters 5 and count is 1 then display 5x1
             val answer = tableNumber * count
             /*displays as
