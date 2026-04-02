@@ -31,6 +31,13 @@ class TableDisplay : AppCompatActivity() {
         multiplyTable.text = timesDisplay
 
         while (count <= 10) {
+
+            //adding a continue
+            if (count == 4){
+                count++
+                continue
+            }
+            
             //example user enters 5 and count is 1 then display 5x1
             val answer = tableNumber * count
             /*displays as
