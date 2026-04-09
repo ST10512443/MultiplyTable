@@ -30,7 +30,8 @@ class TableDisplay : AppCompatActivity() {
         //Displaying the number the user entered on the second page next to the text "x tables"
         multiplyTable.text = timesDisplay
 
-        while (count <= 10) {
+        //ice task 5 change from 10 to 20
+        while (count <= 20) {
 
             //adding a continue
             if (count == 4){

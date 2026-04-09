@@ -41,6 +41,7 @@
         android:layout_width="262dp"
         android:layout_height="59dp"
         android:text="Multiply"
+        android:textColorHint="#231B1B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
